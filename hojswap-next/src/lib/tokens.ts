@@ -122,13 +122,6 @@ export const TOKENS: Token[] = [
     chainId: base.id,
     decimals: 18,
   },
-  {
-    symbol: "DEGEN",
-    name: "Degen",
-    address: getAddress("0x4ed4e862860bed7a9570b96d89af5e1b0efefed"),
-    chainId: base.id,
-    decimals: 18,
-  },
 
   // ─── Ethereum mainnet ────────────────────────────────────
   {

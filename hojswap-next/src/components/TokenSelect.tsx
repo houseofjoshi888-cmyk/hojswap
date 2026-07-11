@@ -40,7 +40,6 @@ const TOKEN_LOGOS: Record<string, string> = {
   AERO: "https://assets.coingecko.com/coins/images/31745/standard/token.png",
   BRETT: "https://assets.coingecko.com/coins/images/35529/standard/1000050750.png",
   VIRTUAL: "https://assets.coingecko.com/coins/images/34057/standard/LOGOMARK.png",
-  DEGEN: "https://assets.coingecko.com/coins/images/34515/standard/android-chrome-512x512.png",
   FDUSD: "https://assets.coingecko.com/coins/images/31079/standard/firstfigital.jpeg",
   BABYDOGE: "https://assets.coingecko.com/coins/images/16125/standard/babydoge.jpg",
   QUEENJOSHI: "/logo.png",

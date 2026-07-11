@@ -24,7 +24,6 @@ const tokenGroups: Array<{ title: string; eyebrow: string; tokens: Token[] }> = 
       { symbol: "MOG", name: "Mog Coin", logo: "/tokens/mog.png" },
       { symbol: "TOSHI", name: "Toshi", logo: "/tokens/toshi.png" },
       { symbol: "VIRTUAL", name: "Virtuals Protocol", logo: "https://assets.coingecko.com/coins/images/34057/standard/LOGOMARK.png" },
-      { symbol: "DEGEN", name: "Degen", logo: "https://assets.coingecko.com/coins/images/34515/standard/android-chrome-512x512.png" },
     ],
   },
   {
@@ -147,7 +146,7 @@ const tokenGroups: Array<{ title: string; eyebrow: string; tokens: Token[] }> = 
 
 const networks = [
   { name: "Ethereum", badge: "Swap + Bridge", desc: "Deep liquidity for SHIB, BONE, TREAT, OSCAR, BNB, MAME, WETH, DAI, LINK, UNI, AAVE, PEPE, FLOKI, USDC, USDT, and ETH." },
-  { name: "Base", badge: "Swap + Bridge", desc: "Home for QUEENJOSHI, KINGJOSHI, SHIB, WETH, cbBTC, AERO, BRETT, MOG, TOSHI, VIRTUAL, and DEGEN with faster, lower-cost trading." },
+  { name: "Base", badge: "Swap + Bridge", desc: "Home for QUEENJOSHI, KINGJOSHI, SHIB, WETH, cbBTC, AERO, BRETT, MOG, TOSHI, and VIRTUAL with faster, lower-cost trading." },
   { name: "Polygon", badge: "Swap", desc: "POL, WETH, WBTC, USDC, USDT, AAVE, LINK, and DAI routed through 0x liquidity." },
   { name: "BNB Chain", badge: "Swap", desc: "BNB, USDT, USDC, DOGE, FDUSD, CAKE, and BabyDoge through 0x liquidity." },
   { name: "Arbitrum", badge: "Swap", desc: "ARB, ETH, USDC, WETH, USDT, WBTC, GMX, and MAGIC across Ethereum L2 liquidity." },
@@ -160,7 +159,7 @@ const networks = [
 
 const highlights = [
   { value: "10", label: "Supported chains" },
-  { value: "73", label: "Shown assets" },
+  { value: "72", label: "Shown assets" },
   { value: "1%", label: "House fee" },
 ];
 
