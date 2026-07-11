@@ -76,7 +76,7 @@ const tokenGroups: Array<{ title: string; eyebrow: string; tokens: Token[] }> = 
       { symbol: "USDT", name: "Tether USD", logo: "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/smartchain/assets/0x55d398326f99059fF775485246999027B3197955/logo.png" },
       { symbol: "USDC", name: "USD Coin", logo: "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/smartchain/assets/0x8AC76a51cc950d9822D68b83FE1Ad97B32Cd580d/logo.png" },
       { symbol: "DOGE", name: "Binance-Peg Dogecoin", logo: "https://assets.coingecko.com/coins/images/5/standard/dogecoin.png" },
-      { symbol: "FDUSD", name: "First Digital USD", logo: "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/smartchain/assets/0xc5f0f7b66764F6ec8C8Dff7BA684102245B16472/logo.png" },
+      { symbol: "FDUSD", name: "First Digital USD", logo: "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/smartchain/assets/0xc5f0f7b66764F6ec8C8Dff7BA683102295E16409/logo.png" },
       { symbol: "CAKE", name: "PancakeSwap Token", logo: "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/smartchain/assets/0x0E09FaBB73Bd3Ade0A17ECC321fD13a19E81cE82/logo.png" },
       { symbol: "BabyDoge", name: "Baby Doge Coin", logo: "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/smartchain/assets/0xc748673057861a797275CD8A068AbB95A902e8de/logo.png" },
     ],
@@ -90,7 +90,7 @@ const tokenGroups: Array<{ title: string; eyebrow: string; tokens: Token[] }> = 
       { symbol: "USDC", name: "USD Coin", logo: "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/arbitrum/assets/0xaf88d065e77c8cC2239327C5EDb3A432268e5831/logo.png" },
       { symbol: "WETH", name: "Wrapped Ether", logo: "https://assets.coingecko.com/coins/images/2518/standard/weth.png" },
       { symbol: "USDT", name: "Tether USD", logo: "https://assets.coingecko.com/coins/images/325/standard/Tether.png" },
-      { symbol: "WBTC", name: "Wrapped BTC", logo: "https://assets.coingecko.com/coins/images/7598/standard/wrapped_bitcoin_wbtc.png" },
+      { symbol: "WBTC", name: "Wrapped BTC", logo: "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png" },
       { symbol: "GMX", name: "GMX", logo: "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/arbitrum/assets/0xfc5A1A6EB076a2C7aD06eD22C90d7E710E35ad0a/logo.png" },
       { symbol: "MAGIC", name: "MAGIC", logo: "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/arbitrum/assets/0x539bdE0d7Dbd336b79148AA742883198BBF60342/logo.png" },
     ],
@@ -113,10 +113,10 @@ const tokenGroups: Array<{ title: string; eyebrow: string; tokens: Token[] }> = 
     eyebrow: "Avalanche",
     tokens: [
       { symbol: "AVAX", name: "Avalanche", logo: "https://assets.coingecko.com/coins/images/12559/standard/Avalanche_Circle_RedWhite_Trans.png" },
-      { symbol: "USDC", name: "USD Coin", logo: "https://assets.coingecko.com/coins/images/6319/standard/usdc.png" },
+      { symbol: "USDC", name: "USD Coin", logo: "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png" },
       { symbol: "USDT", name: "Tether USD", logo: "https://assets.coingecko.com/coins/images/325/standard/Tether.png" },
       { symbol: "WETH", name: "Wrapped Ether", logo: "https://assets.coingecko.com/coins/images/2518/standard/weth.png" },
-      { symbol: "WBTC", name: "Wrapped BTC", logo: "https://assets.coingecko.com/coins/images/7598/standard/wrapped_bitcoin_wbtc.png" },
+      { symbol: "WBTC", name: "Wrapped BTC", logo: "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png" },
     ],
   },
   {
@@ -125,7 +125,7 @@ const tokenGroups: Array<{ title: string; eyebrow: string; tokens: Token[] }> = 
     tokens: [
       { symbol: "ETH", name: "Ether", logo: "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/info/logo.png" },
       { symbol: "WETH", name: "Wrapped Ether", logo: "https://assets.coingecko.com/coins/images/2518/standard/weth.png" },
-      { symbol: "USDC", name: "USD Coin", logo: "https://assets.coingecko.com/coins/images/6319/standard/usdc.png" },
+      { symbol: "USDC", name: "USD Coin", logo: "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png" },
     ],
   },
   {

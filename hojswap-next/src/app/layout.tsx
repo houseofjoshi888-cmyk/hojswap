@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Cinzel, Cormorant_Garamond } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { Providers } from "@/components/providers";
@@ -6,6 +7,20 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 const siteUrl = process.env.NEXT_PUBLIC_APP_URL ?? "https://hojswap.com";
+
+const displayFont = Cinzel({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  variable: "--font-cinzel",
+  display: "swap",
+});
+
+const bodyFont = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-cormorant",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -16,10 +31,11 @@ export const metadata: Metadata = {
   manifest: "/manifest.json",
   icons: {
     icon: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.png", type: "image/png" },
       { url: "/logo.png", type: "image/png" },
     ],
-    apple: [{ url: "/logo.png", type: "image/png" }],
+    shortcut: [{ url: "/favicon.png", type: "image/png" }],
+    apple: [{ url: "/favicon.png", type: "image/png" }],
   },
   openGraph: {
     type: "website",
@@ -45,7 +61,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="antialiased">
+    <html lang="en" className={`${displayFont.variable} ${bodyFont.variable} antialiased`}>
       <head>
         <Script
           async
@@ -61,7 +77,7 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className="flex min-h-dvh flex-col bg-[#0b0b0d] text-[#f5f1e6] font-sans">
+      <body className="flex min-h-dvh flex-col bg-[#0b0b0d] text-[#f5f1e6]">
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8905064413166970"
