@@ -128,7 +128,6 @@ export async function GET(request: Request) {
           ? "<0.000001"
           : amount.toLocaleString(undefined, { maximumFractionDigits: 6 });
       const kind = tx.to?.toLowerCase() === HOUSE_WALLET.toLowerCase() ? "fee" : "wallet";
-      const nativeSymbol = nativeSymbolForChain(chainId);
       return {
         hash: tx.hash,
         chainId,
@@ -157,6 +156,7 @@ export async function GET(request: Request) {
           ? "<0.0001"
           : ethVal.toLocaleString(undefined, { maximumFractionDigits: 6 });
       const kind = tx.to?.toLowerCase() === HOUSE_WALLET.toLowerCase() ? "fee" : "wallet";
+      const nativeSymbol = nativeSymbolForChain(chainId);
       return {
         hash: tx.hash,
         chainId,
