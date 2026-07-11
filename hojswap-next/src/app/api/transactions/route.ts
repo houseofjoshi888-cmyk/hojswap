@@ -156,7 +156,6 @@ export async function GET(request: Request) {
           ? "<0.0001"
           : ethVal.toLocaleString(undefined, { maximumFractionDigits: 6 });
       const kind = tx.to?.toLowerCase() === HOUSE_WALLET.toLowerCase() ? "fee" : "wallet";
-      const nativeSymbol = nativeSymbolForChain(chainId);
       return {
         hash: tx.hash,
         chainId,
@@ -164,10 +163,10 @@ export async function GET(request: Request) {
         status: tx.isError === "1" ? "failed" : "success",
         kind,
         type: "eth",
-        summary: `${amtStr} ${nativeSymbol}`,
+        summary: `${amtStr} ${nativeSymbolForChain(chainId)}`,
         from: tx.from,
         to: tx.to,
-        tokenSymbol: nativeSymbol,
+        tokenSymbol: nativeSymbolForChain(chainId),
         amount: amtStr,
       };
     };
