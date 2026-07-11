@@ -750,10 +750,11 @@ function SwapCardInner() {
     ), [quote, price, nativeUsdPrice, nativeSymbol]);
     const hasNativeGas = !isConnected ? null : nativeBalanceData ? nativeBalanceData.value > 0n : null;
 
-    const CHAINS = CHAIN_OPTIONS.map(({ id, label, shortLabel }) => ({
+    const CHAINS = CHAIN_OPTIONS.map(({ id, label, shortLabel, swap }) => ({
         id,
-        label: shortLabel,
         name: label,
+        ticker: shortLabel,
+        mode: swap ? "Swap" : "Bridge",
         logo: CHAIN_LOGOS[id],
     }));
     const selectedChainOption = CHAINS.find((chain) => chain.id === selectedChainId) ?? CHAINS[0];
@@ -808,12 +809,12 @@ function SwapCardInner() {
                         >
                             <span className="flex min-w-0 items-center gap-2">
                                 <TokenLogo
-                                    symbol={selectedChainOption.label}
+                                    symbol={selectedChainOption.ticker}
                                     logo={selectedChainOption.logo}
                                     size="xs"
                                 />
                                 <span className="truncate text-xs font-semibold text-white/80">
-                                    {selectedChainOption.label}
+                                    {selectedChainOption.name}
                                 </span>
                             </span>
                             <span className={`text-xs text-[rgba(212,175,55,0.9)] transition ${chainMenuOpen ? "rotate-180" : ""}`}>▾</span>
@@ -822,7 +823,7 @@ function SwapCardInner() {
                         {chainMenuOpen && (
                             <div
                                 role="listbox"
-                                className="absolute right-0 top-full z-50 mt-2 max-h-72 min-w-[14rem] overflow-y-auto rounded-2xl border border-white/10 bg-[#151517] p-1.5 shadow-[0_22px_55px_rgba(0,0,0,0.55)]"
+                                className="absolute right-0 top-full z-50 mt-2 max-h-72 w-[min(18rem,calc(100vw-2rem))] overflow-y-auto rounded-2xl border border-white/10 bg-[#151517] p-1.5 shadow-[0_22px_55px_rgba(0,0,0,0.55)]"
                             >
                                 {CHAINS.map((chain) => {
                                     const selected = chain.id === selectedChainId;
@@ -838,10 +839,19 @@ function SwapCardInner() {
                                                 : "text-white/78 hover:bg-white/[0.06] hover:text-white"
                                                 }`}
                                         >
-                                            <TokenLogo symbol={chain.label} logo={chain.logo} size="sm" />
-                                            <span className="min-w-0">
-                                                <span className="block truncate text-sm font-semibold leading-tight">{chain.label}</span>
-                                                <span className="block truncate text-xs leading-tight text-white/40">{chain.name}</span>
+                                            <TokenLogo symbol={chain.ticker} logo={chain.logo} size="sm" />
+                                            <span className="flex min-w-0 flex-1 items-center justify-between gap-3">
+                                                <span className="min-w-0">
+                                                    <span className="block truncate text-sm font-semibold leading-tight">{chain.name}</span>
+                                                    <span className="block truncate text-xs leading-tight text-white/40">{chain.ticker}</span>
+                                                </span>
+                                                <span className={`shrink-0 rounded-full border px-2 py-0.5 text-[10px] font-semibold ${
+                                                    chain.mode === "Swap"
+                                                        ? "border-[rgba(212,175,55,0.3)] text-[rgba(212,175,55,0.82)]"
+                                                        : "border-white/10 text-white/40"
+                                                }`}>
+                                                    {chain.mode}
+                                                </span>
                                             </span>
                                         </button>
                                     );
