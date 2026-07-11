@@ -793,12 +793,12 @@ function SwapCardInner() {
             )}
 
             <div className="hoj-card space-y-2.5 rounded-[28px] p-2.5 sm:p-3">
-                <div className="flex items-center justify-between gap-2 px-1 pb-1">
+                <div className="relative z-[90] flex items-center justify-between gap-2 px-1 pb-1">
                     <div className="min-w-0">
                         <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/35">Trade</p>
                         <p className="truncate text-sm font-semibold text-white/80">{selectedChainName}</p>
                     </div>
-                    <div ref={chainMenuRef} className="relative">
+                    <div ref={chainMenuRef} className="relative z-[100]">
                         <button
                             type="button"
                             onClick={() => setChainMenuOpen((next) => !next)}
@@ -823,7 +823,7 @@ function SwapCardInner() {
                         {chainMenuOpen && (
                             <div
                                 role="listbox"
-                                className="absolute right-0 top-full z-50 mt-2 max-h-72 w-[min(18rem,calc(100vw-2rem))] overflow-y-auto rounded-2xl border border-white/10 bg-[#151517] p-1.5 shadow-[0_22px_55px_rgba(0,0,0,0.55)]"
+                                className="absolute right-0 top-full z-[120] mt-2 max-h-72 w-[min(18rem,calc(100vw-2rem))] overflow-y-auto rounded-2xl border border-white/10 bg-[#111113] p-1.5 shadow-[0_24px_70px_rgba(0,0,0,0.78)] ring-1 ring-black/40"
                             >
                                 {CHAINS.map((chain) => {
                                     const selected = chain.id === selectedChainId;
